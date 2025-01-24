@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f6961; 
+    border: 3px solid red; 
+    border-radius: 15px; 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+}
+
+#newsFeed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#newsForm input, 
+#newsForm textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.news-interactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.interaction-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.interaction-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like-btn.active {
+    color: green;
+}
+
+.dislike-btn.active {
+    color: red;
+}
+
+.comments-section {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.comment-list {
+    margin-top: 10px;
+}
+
+.comment-list p {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    #newsFeed {
+        grid-template-columns: 1fr;
+    }
+}
