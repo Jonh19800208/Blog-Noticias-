@@ -11,27 +11,16 @@
         <header>
             <h1>Blog de Noticias</h1>
             <div class="admin-controls">
+                <button id="adminLoginButton">Iniciar Sesión Admin</button>
                 <button id="addNewsButton" style="display:none;">Añadir Noticia</button>
-                <button id="loginButton">Iniciar Sesión</button>
+                <button id="clearNewsButton" style="display:none;">Borrar Todas las Noticias</button>
+                <button id="adminLogoutButton" style="display:none;">Cerrar Sesión</button>
             </div>
         </header>
         
         <main id="newsFeed">
             <!-- Las noticias se cargarán dinámicamente aquí -->
         </main>
-    </div>
-
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-login">&times;</span>
-            <h2>Iniciar Sesión Admin</h2>
-            <form id="loginForm">
-                <input type="text" id="usernameInput" placeholder="Usuario" required>
-                <input type="password" id="passwordInput" placeholder="Contraseña" required>
-                <button type="submit">Iniciar Sesión</button>
-            </form>
-        </div>
     </div>
 
     <div id="newsModal" class="modal">
@@ -43,6 +32,18 @@
                 <input type="text" id="linkInput" placeholder="URL de la imagen (opcional)">
                 <textarea id="contentInput" placeholder="Contenido de la noticia" required></textarea>
                 <button type="submit">Guardar Noticia</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-login">&times;</span>
+            <h2>Iniciar Sesión Admin</h2>
+            <form id="adminLoginForm">
+                <input type="text" id="adminUsername" placeholder="Usuario" required>
+                <input type="password" id="adminPassword" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
             </form>
         </div>
     </div>
