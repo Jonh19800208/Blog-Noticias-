@@ -92,6 +92,12 @@ header h1 {
     padding: 10px;
 }
 
+#loginForm input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 .news-interactions {
     display: flex;
     justify-content: space-between;
@@ -142,6 +148,18 @@ header h1 {
     padding: 5px;
     background-color: #f4f4f4;
     border-radius: 4px;
+}
+
+#loginModal .modal-content {
+    max-width: 300px;
+}
+
+.close-login {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
